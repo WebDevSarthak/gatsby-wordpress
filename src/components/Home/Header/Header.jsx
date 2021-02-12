@@ -5,6 +5,13 @@ import './Header.css'
 import HeaderMenu from './HeaderMenu'
 
 function Header(props) {
+
+    function toggleClass(){
+        document.getElementById("home").classList.remove("active");
+        document.getElementById("develop").classList.add("active");
+    }
+
+
     return (
         <div>
             <header class="d-flex align-items-center sticky">
@@ -29,11 +36,11 @@ function Header(props) {
                                     {/* <!--menu start--> */}
                                     <ul id="menu">
                                         <li class="nav-item">
-                                            <a href="/#" class="nav-link active">Home</a>
+                                            <a id="home" href="/#" class="nav-link active">Home</a>
                                         </li>
                                         
                                         <li class="nav-item">
-                                            <a href="development-application.html" class="nav-link"><Link to="/Development/" activeClassName="active">Development Application</Link></a>
+                                            <a id="develop" onClick={toggleClass} href="development-application.html" class="nav-link"><Link to="/Development/" >Development Application</Link></a>
                                         </li>
                                         
                                         <HeaderMenu href="/#" class="nav-link" text="Subdivisions" />

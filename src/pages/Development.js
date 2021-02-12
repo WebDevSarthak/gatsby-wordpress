@@ -1,7 +1,8 @@
 import React from 'react'
+import Helmet from "react-helmet"
+import { withPrefix, Link } from "gatsby"
 import '../components/helper.css'
 import '../components/style.css'
-////////////////////////////
 import Header from '../components/Home/Header/Header'
 import HomeArea from '../components/Development/HomeArea/HomeArea'
 import Application from '../components/Development/Application/Application'
@@ -15,9 +16,13 @@ import '../components/responsive.css'
 ///////////////////////
 import Layout from "../components/layout"
 
+
 function Development(){
     return (
         <Layout>
+                <Helmet>
+                    <script src={withPrefix('script.js')} type="text/javascript" />
+                </Helmet>
                 <Header />
                 <HomeArea />
                 <Application />

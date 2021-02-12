@@ -18,9 +18,8 @@ import Footer from './Home/Footer/Footer'
 import '../components/responsive.css'
 
 function Home(){
+    
     return(
-        
-        <div>
             <body>
                 <Preloader />
                 <Header class="nav-link active"/>
@@ -36,9 +35,8 @@ function Home(){
                 <PracticeArea />
                 <Footer />
                 <BackToTop />
-            </body>
-        </div>   
+            </body>   
     )
 }
-// D:\Web_Development\ladderStack\Test\set-1\gatsby-wordpress\src\components\Home.js
+
 export default Home
